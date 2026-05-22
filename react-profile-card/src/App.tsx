@@ -19,12 +19,9 @@ function App() {
   const [count, setCount] = useState<number>(0);
 
   const hundleClick = (): void => {
-    if (count < profiles.length - 1) {
-      setCount(prev => prev + 1);
-    }
-    if (count === profiles.length - 1) {
-      setCount(prev => prev = 0);
-    }
+
+    setCount(prev => (prev === profiles.length - 1 ? 0 : prev + 1))
+
   }
 
   return (
