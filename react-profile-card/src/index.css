@@ -1,0 +1,18 @@
+li {
+  list-style: none;
+}
+
+h2, p, h3 {
+  text-align: center;
+}
+
+button {
+  display: block;
+  margin:0 auto;
+}
+
+.cardWrapper {
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  padding: 16px;
+}
