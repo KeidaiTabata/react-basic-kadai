@@ -1,0 +1,43 @@
+#root {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 2rem;
+  text-align: center;
+}
+
+body {
+  margin: 0; /* 外側の余白 */
+  font-family: 'Helvetica', 'Arial', sans-serif; /* フォント */
+}
+
+h2 {
+  margin-bottom: 20px; /* 下側の余白 */
+}
+
+p {
+  font-size: 1.2em; /* フォントサイズ1.2倍 */
+  margin-bottom: 10px; /* 下側の余白 */
+}
+
+/* ボタン */
+button {
+  background-color: red; /* 背景色 */
+  color: white; /* 文字色 */
+  border: none; /* 境界線なし */
+  padding: 0.5rem 1rem; /* 内側の余白 */
+  margin: 0 5px; /* 左右の余白 */
+  border-radius: 6px; /* 角を丸める */
+  cursor: pointer; /* ポインター */
+  transition: background-color 0.3s; /* 背景色の変化 */
+}
+
+/* ボタンにカーソルが重なったときのスタイル */
+button:hover {
+  background-color: darkred; /* 背景色変更 */
+}
+
+/* ボタンが無効化されているときのスタイル */
+button:disabled {
+  opacity: 0.5; /* 透明度50% */
+  cursor: not-allowed; /* マウスポインタを「使用不可」に変更 */
+}
