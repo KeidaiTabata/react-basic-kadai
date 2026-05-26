@@ -2,9 +2,9 @@ import { useState } from "react"
 import { ProfileCard } from "./ProfileCard"
 
 export type profiles = {
-  name: string,
-  age: number,
-  bio: string
+  name: string;
+  age: number;
+  bio: string;
 };
 
 function App() {
@@ -17,7 +17,6 @@ function App() {
     { name: '武者小路勇気', age: 29, bio: 'フロントエンドエンジニア。ReactとTypeScriptを使って開発中です。' }
   ];
   const [count, setCount] = useState<number>(0);
-
   const hundleClick = (): void => {
 
     setCount(prev => (prev === profiles.length - 1 ? 0 : prev + 1))
@@ -25,9 +24,14 @@ function App() {
   }
 
   return (
-    <>
-      <ProfileCard count={count} onIncrease={hundleClick} profiles={profiles} />
-    </>
+    <div>
+      <ul>
+        {profiles.filter((_, indx) => indx === count).map(p => (
+          <ProfileCard profile={p} key={p.name} />
+        ))}
+      </ul>
+      <button onClick={hundleClick}>次のプロフィール</button>
+    </div>
   )
 }
 
